@@ -7,15 +7,15 @@ def test_get_single_movie():
     single_movie = tmdb_client.get_single_movie(movie_id=2)
     assert single_movie is not None
 
-def test_get_single_movie_cast(monkeypatch):
-   mock_single_movie_cast = ['Movie 1', 'Movie 2']
-   requests_mock = Mock()
-   response = requests_mock.return_value
-   response.json.return_value = mock_single_movie_cast
-   monkeypatch.setattr("tmdb_client.requests.get", requests_mock)
+# def test_get_single_movie_cast(monkeypatch):
+#    mock_single_movie_cast = ['Movie 1', 'Movie 2']
+#    requests_mock = Mock()
+#    response = requests_mock.return_value
+#    response.json.return_value = mock_single_movie_cast
+#    monkeypatch.setattr("tmdb_client.requests.get", requests_mock)
 
-   single_movie_cast = tmdb_client.get_single_movie_cast(movie_id=2)
-   assert single_movie_cast == mock_single_movie_cast
+#    single_movie_cast = tmdb_client.get_single_movie_cast(movie_id=2)
+#    assert single_movie_cast == mock_single_movie_cast
 
 def test_get_single_movie_cast():
     single_movie_cast = tmdb_client.get_single_movie_cast(movie_id=3)
