@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import tmdb_client
+import pytest
 
 def test_get_single_movie(movie_id):
     details = tmdb_client.get_single_movie(movie_id)
