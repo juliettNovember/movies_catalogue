@@ -1,9 +1,12 @@
-import sys
-sys.path.insert(0, '/Users/justynanowakowska/Documents/Projekty/movies_project/movies_catalogue')
-from movies_catalogue import main, tmdb_client
-from main import app
-from unittest.mock import Mock
-import pytest
+# import os
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# #print(BASE_DIR)
+# from movies_catalogue import main
+# from main import app #<<<--------- jak to zrobic poprawnie, kompilator podkreśla No name 'app' in module 'main'
+# from movies_catalogue import tmdb_client  #<<<--------- terminal wyrzuca błąd ModuleNotFoundError: No module named 'tmdb_client'
+# from unittest.mock import Mock
+# import pytest
 
 @pytest.mark.parametrize('list_type', (
   ('now_playing'),
