@@ -1,8 +1,8 @@
 import sys
 sys.path.insert(0, '/Users/justynanowakowska/Documents/Projekty/movies_project/movies_catalogue')
 from flask import Flask, render_template, request, redirect
-from movies_catalogue import main
-from main import app
+#from movies_catalogue import main
+from movies_catalogue.main import app
 from movies_catalogue import tmdb_client
 import pytest
 from unittest.mock import Mock
